@@ -1,3 +1,6 @@
+This applescript will scrape the presenter notes out of a Keynote presentation and put them into a new TextEdit document.
+
+```
 tell application "Keynote"
 	activate
 	if not (exists document 1) then error number -128
@@ -20,3 +23,4 @@ tell application "TextEdit"
 	activate
 	make new document with properties {text:combinedPresenterNotes}
 end tell
+```
